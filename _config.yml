@@ -1,0 +1,8 @@
+pages:
+  about: /about/
+  #links: /links/
+
+mathjax:
+  enabled: true
+  smartload: false
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML

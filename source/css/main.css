@@ -1,0 +1,42 @@
+::-webkit-scrollbar-thumb {
+  background: #ededed;
+  border-radius: 5px
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 5px
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background: #000;
+}
+
+.vl {
+  height: auto;
+  border-left: 2px solid;
+  color: #00000080;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.headerbar {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  background-color: inherit;
+  height: 3em;
+  padding: 5px;
+}
+
+.title:hover {
+  background-color: #80808080;
+  transition: 0.2s ease-in-out;
+}
