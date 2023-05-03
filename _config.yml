@@ -1,6 +1,9 @@
+avatar: /images/avatar.png
+
 pages:
   about: /about/
-  #links: /links/
+  tags: /tags/
+  links: /links/
 
 mathjax:
   enabled: true

@@ -1,0 +1,23 @@
+<div class="side">
+  <div class="container">
+    <h3>categories</h3>
+    <ul>
+      <% site.categories.each(category=>{ %>
+      <li>
+        <a href="<%- url_for(category.path) %>"> <%- category.name %> </a>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h3>tags</h3>
+    <ul>
+      <% site.tags.each(tag=>{ %>
+      <li>
+        <a href="<%- url_for(tag.path) %>"> <%- tag.name %> </a>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</div>

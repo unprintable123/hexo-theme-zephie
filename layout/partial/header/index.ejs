@@ -1,8 +1,19 @@
 <div class="headerbar">
-  <a class="title" href="/">
+  <a class="header-button title" href="/">
     <%= config.title %>
   </a>
   <div class="vl"></div>
-  <a href="/">Home</a> |
-  <a href="<%-url_for(config.archive_dir)%>">Archive</a>
+  <div class="leftheader">
+    <%- partial('button', {path: url_for('/'), name: 'Home'})%>
+    <%- partial('button', {path: url_for(config.archive_dir), name: 'Archive'})%>
+    <% if(theme.pages.tags){ %>
+    <%- partial('button', {path: url_for(theme.pages.tags), name: 'Tags'})%>
+    <% } %>
+    <% if(theme.pages.links){ %>
+    <%- partial('button', {path: url_for(theme.pages.links), name: 'Links'})%>
+    <% } %>
+    <% if(theme.pages.about){ %>
+    <%- partial('button', {path: url_for(theme.pages.about), name: 'About'})%>
+    <% } %>
+  </div>
 </div>

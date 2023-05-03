@@ -1,15 +1,18 @@
-<ul>
+<div class="center">
   <% page.posts.each(post=>{ %>
-      <li>
-          <a href="<%=url_for(post.path)%>">
-              <%= post.title %>
-          </a>
-          | <%- date( post.date , 'YYYY/MM/DD HH:mm') %> 
-      </li>
+  <div class="container">
+    <a href="<%=url_for(post.path)%>">
+      <%= post.title %>
+    </a>
+    <div><%- date( post.date , 'YYYY/MM/DD HH:mm') %></div>
+    <%- post.excerpt %>
+  </div>
   <% }) %>
-  </ul>
-  
-  <%- paginator({
+
+  <div class="page">
+    <%- paginator({
       prev_text: '<',
       next_text: '>'
   }) %>
+  </div>
+</div>

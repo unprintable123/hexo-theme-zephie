@@ -9,28 +9,20 @@
 </head>
 
 <body>
-  <%- partial('partial/header/index') %>
+  <div>
+    <%- partial('partial/header/index') %>
+  </div>
 
-  <%- body %>
+  <div class="main">
+    <div class="sidebar">
+      <%- partial('partial/sidebar/index') %>
+    </div>
+    <div class="content">
+      <%- body %>
+    </div>
+  </div>
 
-  <h3>categories</h3>
-  <ul>
-    <% site.categories.each(category=>{ %>
-    <li>
-      <a href="<%- url_for(category.path) %>"> <%- category.name %> </a>
-    </li>
-    <% }) %>
-  </ul>
-
-  <h3>tags</h3>
-  <ul>
-    <% site.tags.each(tag=>{ %>
-    <li>
-      <a href="<%- url_for(tag.path) %>"> <%- tag.name %> </a>
-    </li>
-    <% }) %>
-  </ul>
-
+  <%- partial('partial/footer/index') %>
   <%- partial('partial/mathjax') %>
 </body>
 
