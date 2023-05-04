@@ -1,17 +1,43 @@
 ::-webkit-scrollbar-thumb {
-  background: #ededed;
+  background: #666666;
   border-radius: 5px
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #fff;
   border-radius: 5px
 }
 
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
-  background: #000;
+  background: #fff;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Segoe UI", "Microsoft YaHei", Helvetica, sans-serif, Arial;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.prettyprint {
+  background-color: #f0f0f0 !important;
+}
+
+pre {
+  background-color: #f0f0f0 !important;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  overflow: scroll;
+  border-radius: 8px;
+  width: 95%;
+  max-height: 400px;
+  margin: 10px auto;
+  white-space: pre-wrap;
+  padding: 20px !important;
 }
 
 a {
@@ -77,7 +103,26 @@ a:hover {
 .side {
   right: 0;
   width: 100%;
-  max-width: 30em;
+  max-width: 27em;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.author img {
+  min-width: 100px;
+  width: 20%;
+  border-radius: 9999px;
+  box-shadow: .5px .5px 8px 1px #80808040;
+  background-color: #80808040;
+}
+
+.author span {
+  margin: 10px;
 }
 
 .main {
@@ -113,7 +158,9 @@ a:hover {
 }
 
 .extend {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 5px;
   width: 1em;
   height: 1em;
@@ -122,11 +169,12 @@ a:hover {
   border-radius: 5px;
   box-shadow: .5px .5px 8px 1px #80808040;
   background-color: white;
-  text-align: center;
 }
 
 .page-number {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 5px;
   width: 1em;
   height: 1em;
@@ -135,7 +183,6 @@ a:hover {
   border-radius: 5px;
   box-shadow: .5px .5px 8px 1px #80808040;
   background-color: white;
-  text-align: center;
 }
 
 .footer {

@@ -1,5 +1,11 @@
 <div class="side">
   <div class="container">
+    <div class="author">
+      <img src="<%- url_for('/images/avatar.png') %>">
+      <span><%= config.author %></span>
+    </div>
+  </div>
+  <div class="container">
     <h3>categories</h3>
     <ul>
       <% site.categories.each(category=>{ %>
