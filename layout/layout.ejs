@@ -8,7 +8,7 @@
   <script src="<%- url_for('/lib/js/jquery-3.6.4.js') %>"></script>
   <%- partial('partial/css',{},{cache:true}) %>
   <link rel="stylesheet" type="text/css" href="<%- url_for('/css/main.css') %>">
-  <link rel="stylesheet" type="text/css" href="<%- url_for('/lib/css/prettify/tomorrow.min.css') %>">
+  <link rel="stylesheet" type="text/css" href="<%- url_for('/lib/css/prettify/'+theme.highlight.light+'.min.css') %>">
 </head>
 
 <body>
@@ -27,6 +27,7 @@
 
   <%- partial('partial/footer/index') %>
   <%- partial('partial/mathjax') %>
+
   <script type="text/javascript">
     $(document).ready(function() {
       $('pre').addClass('prettyprint');
