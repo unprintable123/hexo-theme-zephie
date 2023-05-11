@@ -1,0 +1,39 @@
+<div class="center">
+  <% page.posts.each(post=>{ %>
+  <div class="container">
+    <% if(mini){ %>
+    <div class="minititle">
+      <h2>
+        <a href="<%=url_for(post.path)%>">
+          <%= post.title %>
+        </a>
+      </h2>
+      <span><%- date( post.date , 'YYYY/MM/DD') %></span>
+    </div>
+    <% }else{ %>
+    <h2>
+      <a href="<%=url_for(post.path)%>">
+        <%= post.title %>
+      </a>
+    </h2>
+    <span><%- date( post.date , 'YYYY/MM/DD') %></span>
+    <hr>
+    <p>
+      <a class="noselect" href="<%= url_for(post.path) %>">
+        <%= post.excerpt.replaceAll(/<[^>]*>/g,'') %>
+      </a>
+    </p>
+    <% } %>
+  </div>
+  <% }) %>
+
+  <div class=" page">
+    <% if(paging){ %>
+    <%- paginator({
+      end_size: 1,
+      prev_text: '\x3c',
+      next_text: '>'
+      }) %>
+    <% } %>
+  </div>
+</div>

@@ -1,9 +1,11 @@
-avatar: /images/avatar.png
+images:
+  avatar: /images/avatar.png
+  background: /images/background.jpg
 
 pages:
   about: /about/
-  tags: /tags/
-  links: /links/
+  #tags: /tags/
+  #links: /links/
 
 mathjax:
   enabled: true
