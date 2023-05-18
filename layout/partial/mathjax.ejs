@@ -12,3 +12,11 @@
 <script type="text/javascript" src="<%- theme.mathjax.cdn %>"></script>
 <% } %>
 <% } %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('pre').addClass('prettyprint');
+    $('code').addClass('prettyprint');
+    prettyPrint();
+  })
+</script>

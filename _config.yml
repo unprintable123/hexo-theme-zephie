@@ -1,6 +1,6 @@
 images:
   avatar: /images/avatar.png
-  background: /images/background.jpg
+  top: /images/top.jpg
 
 pages:
   about: /about/

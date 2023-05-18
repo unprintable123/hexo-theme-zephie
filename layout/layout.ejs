@@ -15,12 +15,15 @@
   <div>
     <%- partial('partial/header/index') %>
   </div>
-  <div class="back">
-    <img src="<%- theme.images.background %>">
+  <div id="top">
+    <div class="author">
+      <img src="<%- url_for(theme.images.avatar) %>">
+      <span><%= config.author %></span>
+    </div>
   </div>
 
-  <div class="main">
-    <div class="sidebar">
+  <div id="main">
+    <div>
       <%- partial('partial/sidebar/index') %>
     </div>
     <div class="content">
@@ -30,14 +33,6 @@
 
   <%- partial('partial/footer/index') %>
   <%- partial('partial/mathjax') %>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('pre').addClass('prettyprint');
-      $('code').addClass('prettyprint');
-      prettyPrint();
-    })
-  </script>
 </body>
 
 </html>
