@@ -20,17 +20,17 @@
       <span><%- date( post.date , 'YYYY/MM/DD') %></span>
       <div class="vl"></div>
       <% post.categories.each(cat=>{ %>
-        <a href="<%- url_for(cat.path) %>"><%= cat.name %></a>
+      <a href="<%- url_for(cat.path) %>"><%= cat.name %></a>
       <% }) %>
       <div class="vl"></div>
       <% post.tags.each(tag=>{ %>
-        <a href="<%- url_for(tag.path) %>"><%= tag.name %></a>
+      <a href="<%- url_for(tag.path) %>"><%= tag.name %></a>
       <% }) %>
     </div>
     <hr>
     <p>
       <a class="noselect" href="<%= url_for(post.path) %>">
-        <%= post.excerpt.replaceAll(/<[^>]*>/g,'') %>
+        <%= strip_html(post.excerpt) %>
       </a>
     </p>
     <% } %>
