@@ -1,16 +1,16 @@
 <div class="center">
-  <div class="container">
+  <article class="container">
     <div class="title">
       <h1><%= page.title %></h1>
       <span><%- page.categories.map(x=>'<a href="'+url_for('/categories/'+x.name)+'">'+x.name+'</a>').join(' | ') %> | <%= date( page.date , 'YYYY/MM/DD HH:mm') %></span>
     </div>
-    <%- page.content %>
-  </div>
+    <div id="article">
+      <%- page.content %>
+    </div>
+  </article>
 </div>
 <div>
-  <aside class="menu">
-    <div class="container">
-      <%- toc(page.content) %>
-    </div>
+  <aside id="menu">
+    <div class="container js-toc"></div>
   </aside>
 </div>
